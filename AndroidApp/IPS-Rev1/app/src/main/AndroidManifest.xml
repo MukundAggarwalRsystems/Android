@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tushar.ips_rev1">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".welcome_page" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".room_view"
+            android:label="Room View"
+            android:parentActivityName=".mystore" android:screenOrientation="portrait" />
+        <activity
+            android:name=".live_view"
+            android:label="Live View"
+            android:parentActivityName=".mystore" android:screenOrientation="portrait" />
+        <activity
+            android:name=".chart_view"
+            android:label="Chart View"
+            android:parentActivityName=".mystore" android:screenOrientation="portrait" />
+        <activity
+            android:name=".table_view"
+            android:label="Table View"
+            android:parentActivityName=".mystore" android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mystore"
+            android:label="@string/title_activity_mystore"
+            android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

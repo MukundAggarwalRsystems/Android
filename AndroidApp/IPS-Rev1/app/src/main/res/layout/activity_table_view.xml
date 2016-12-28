@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tushar.ips_rev1.table_view">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Date:"
+        android:id="@+id/textView"
+        android:textSize="15sp"
+        android:layout_alignBaseline="@+id/date"
+        android:layout_alignBottom="@+id/date"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="75dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="5"
+        android:id="@+id/date"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/live_calendar_button"
+        android:layout_toEndOf="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/live_calendar_button"
+        android:layout_column="12"
+        android:src="@android:drawable/ic_menu_today"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/date" />
+
+</RelativeLayout>
