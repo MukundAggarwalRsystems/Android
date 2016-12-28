@@ -1,0 +1,3 @@
+This app is basic example to show how to connect to MQTT broker, publish and subscribe.
+
+This app can be use to implement MQTT in any app as the functions are made generic and are very clear.
