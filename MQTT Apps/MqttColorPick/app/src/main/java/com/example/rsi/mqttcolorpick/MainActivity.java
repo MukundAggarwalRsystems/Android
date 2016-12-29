@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     String topic_green = "home/green";
     String topic_blue = "home/blue";
     String topic_ack = "andtest";
+    String topic_rgb = "home/rgb";
 
     MqttAndroidClient client;
     MqttConnectOptions options;
@@ -139,15 +140,26 @@ public class MainActivity extends AppCompatActivity {
                 textView_red.setText("" + red);
                 textView_green.setText("" + green);
                 textView_blue.setText("" + blue);
-                pub_red(red);
-                pub_green(green);
-                pub_blue(blue);
+                //pub_red(red);
+                //pub_green(green);
+                //pub_blue(blue);
+                pub_color(red,green,blue);
+
 
             }
         });
         colorPickerDialog.show();
     }
+    public void pub_color(int red, int green, int blue) {
+        String topic = topic_rgb;
 
+        String message = "(" + red + "," + green + "," + blue + ")";
+        try {
+            client.publish(topic, message.getBytes(), 0, false);
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
+    }
     public void pub_red(int red_color) {
         String topic = topic_red;
         String message = Integer.toString(red_color);
